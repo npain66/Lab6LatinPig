@@ -69,7 +69,7 @@ public class Main {
                 return i;
           }
 
-            //if not vowel found
+           //if not vowel found
             return -1;
 
         }
