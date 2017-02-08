@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by Nicole on 2/3/2017.
+ * Created by Nicole on 2/7/2017.
  */
 
 public class Main {
@@ -16,7 +16,7 @@ public class Main {
         //loop to keep translating if the user enters "yes"
         do {
             System.out.println("Enter a word to translate: ");
-            String word = scan.next();
+            String word = scan.next().toLowerCase();
 
             //translate the word
             String translated = translate(word);
@@ -34,25 +34,19 @@ public class Main {
         scan.close();
     }
 
-    public static String translate(String word) {
+    public static String translate  (String word) {
         //find the first vowel
         int vowel = findVowel(word);
         //if it's an invalid word
-        if (vowel == -1) {
-            return "invalid word";
-
-            //if it's at pos. 0
-            //add "way" to the end
-        } else if (vowel == 0) {
-            return word + "way";
-            //else
-            //take the substring from the vowel to the end
-            //add the substring from 0 until vowel pos. - 1
-            //add "ay"
-
-        } else {
-            return word.substring(vowel, word.length()) + word.substring(0, vowel) + "ay";
-        }
+        //if it's at pos. 0
+        //add "way" to the end
+        if (vowel == -1) return "invalid word" ;
+        else //else
+        //take the substring from the vowel to the end
+        //add the substring from 0 until vowel pos. - 1
+        //add "ay"
+            if (vowel == 0) return word + "way";
+            else return word.substring(vowel, word.length()) + word.substring(0, vowel) + "ay";
     }
 
     public static int findVowel(String word) {
@@ -63,9 +57,10 @@ public class Main {
         //if it's a 'or' 'e' or 'i' or 'o' or 'u'
         //return position(variable i)
 
-        for  (int i = 0; i < word.length(); i++) {
+        for  (int i = 0; i < () ; i++) {
+
           if ((word.charAt(i) == 'a') || (word.charAt(i) == 'e' || (word.charAt(i) == 'i'
-                  || (word.charAt(i) == 'o' || (word.charAt(i) == 'u')) {
+                  || (word.charAt(i) == 'o' || (word.charAt(i) == 'u'))) {
                 return i;
           }
 
@@ -75,7 +70,6 @@ public class Main {
         }
 
     }
-
 
 
 

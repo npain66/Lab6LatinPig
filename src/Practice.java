@@ -6,14 +6,10 @@ import java.util.Scanner;
 public class Practice {
     public static void main(String[] args) {
         //output a count from 1 to 1000
-        for (int i = 1; i <= 1000; i++) {
-            System.out.println(i);
-        }
+        for (int i = 1; i <= 1000; i++) System.out.println(i);
 
         //output a count from 200 to 0 by fours (200 196 192... 0)
-        for (int i = 200; i >= 0; i -= 4) {
-            System.out.println(i);
-        }
+        for (int i = 200; i >= 0; i -= 4) System.out.println(i);
 
         //take an int from user
         //keep prompting then for an int until it's between 1 AND 10
